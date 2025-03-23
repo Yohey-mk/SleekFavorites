@@ -1,7 +1,6 @@
 # SleekFavorites
 Sleek Favorites is a simple bookmark management chrome extension.  
 # How to use  
-Here's how to use:  
 ## Add a Favorite  
 Hit the Add button and enter its URL and name, then hit the save button. Boom. Now it's ready.  
 ## Manage Favorites
