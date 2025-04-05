@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Sleek Favorites",
+    "version": "1.0",
+    "description": "A minimalist homepage with customizable favorites and a memo space.",
+    "permissions": ["storage", "tabs", "scripting"],
+    "chrome_url_overrides": {
+      "newtab": "index.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+}

@@ -1,0 +1,310 @@
+body {
+    background-color: #272525;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1000px;
+    background: #272525;
+    padding: 20px;
+
+}
+
+#favorites-container {
+    max-height: 80vh;
+    overflow-y: auto;
+    flex-grow: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+#favorites-controls {
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+}
+
+#add-favorite, #edit-favorite {
+    padding: 4px 15px;
+    border: none;
+    border-color: #272525;
+    border-radius: 5px;
+    font-size: 16px;
+
+}
+
+#add-favorite {
+    background-color: #2f2d2d;
+    color: white;
+}
+
+#add-favorite:hover {
+    background-color: #2f2d2d;
+}
+
+#edit-favorite {
+    background-color: #2f2d2d;
+    color: white;
+}
+
+#edit-favorite:hover {
+    background-color: #2f2d2d;
+}
+
+.delete-btn {
+    display: none;
+    background: whitesmoke;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.delete-btn:hover {
+    background: whitesmoke;
+    color: black;
+}
+
+.edit-btn {
+    display: none;
+    background: whitesmoke;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.edit-btn:hover {
+    background: whitesmoke;
+    color: black;
+}
+
+.favorites-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    cursor: default;
+}
+
+.favorites-item.dragging {
+    opacity: 0.5;
+    background-color: #f0f0f0;
+}
+
+#favorites-list a {
+    display: block;
+    font-size: 24px;
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+#favorites-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+    padding: 10px;
+    width: 100%;
+}
+
+.favorites-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#favorites-list a:hover {
+    text-decoration: underline;
+}
+
+#note-button {
+    background-color: #2f2d2d;
+    color: white;
+    padding: 4px 15px;
+    border: none;
+    border-color: #272525;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+#note-button:hover {
+    background-color: #2f2d2d;
+    color: white;
+  }
+
+#memo-container {
+    width: 500px;
+    height: 100vh;
+    flex: 1;
+    padding: 10px;
+    background-color: #272525;
+    border-left: 0px solid #0b0b0b;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+#memo-container.show {
+    display: flex;
+}
+
+#memo-container h2 {
+    text-align: center;
+    color: #e0e0e0;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+#memo-area {
+    color: whitesmoke;
+    background-color: #272525;
+    border-color: #373636;
+    flex-grow: 1;
+    height: calc(100vh - 110px);
+    width: 95.5%;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+}
+
+.show {
+    display: block !important;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+#add-favorite-container {
+    display: none;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background: #312f2f;
+    padding: 20px;
+    padding-right: 20px;
+    border: 1px solid #272525;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#add-favorite-container input {
+    width: 97%;
+    padding: 7px;
+    margin-bottom: 10px;
+    color: rgb(35, 35, 35);
+    background: rgb(242, 239, 239);
+    border: 1px solid #848484;
+    border-radius: 5px;
+}
+
+#save-favorite, #cancel-favorite {
+    padding: 5px;
+    padding-right: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 5px;
+    align-items: center;
+}
+
+#save-favorite {
+    background-color: #4e4d4d;
+    color: white;
+    border-color: #212020;
+}
+
+#save-favorite:hover {
+    background-color: #4e4d4d;
+}
+
+#cancel-favorite {
+    background-color: #4e4d4d;
+    color: white;
+    border-color: #212020;
+}
+
+#cancel-favorite:hover {
+    background-color: #4e4d4d;
+}
+
+.show {
+    display: block !important;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.edit-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #312f2f;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+}
+
+.edit-container input {
+    padding: 8px;
+    background: rgb(242, 239, 239);
+    border: 1px solid rgb(242, 239, 239);
+    border-radius: 5px;
+}
+
+.edit-container button {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.edit-container button:first-of-type {
+    background-color: #4e4d4d;
+    color: whitesmoke;
+}
+
+.edit-container button:first-of-type:hover {
+    background-color: #4e4d4d;
+    color: whitesmoke;
+}
+
+.edit-container button:last-of-type {
+    background-color: #4e4d4d;
+    color: whitesmoke;
+}
+
+.edit-container button:last-of-type:hover {
+    background-color: #4e4d4d;
+    color: whitesmoke;
+}

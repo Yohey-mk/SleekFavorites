@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sleek Favorites</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <div id="favorites-container">
+            <div id="favorites-list"></div>
+        </div>
+        <div id="favorites-controls">
+            <button id="add-favorite">Add</button>
+            <button id="edit-favorite">Manage</button>
+            <button id="note-button">Note</button>
+        </div>
+
+        <div id="add-favorite-container" class="hidden">
+            <input type="text" id="site-name" placeholder="Website">
+            <input type="url" id="site-url" placeholder="URL">
+            <button id="save-favorite">Save</button>
+            <button id="cancel-favorite">Cancel</button>
+        </div>
+
+        <div id="memo-container" class="hidden">
+            <h2>Note</h2>
+            <textarea id="memo-area" placeholder=""></textarea>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
