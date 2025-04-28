@@ -3,7 +3,7 @@
     "name": "Sleek Favorites",
     "version": "1.0",
     "description": "A minimalist homepage with customizable favorites and a memo space.",
-    "permissions": ["storage", "tabs", "scripting"],
+    "permissions": ["tabs", "scripting"],
     "chrome_url_overrides": {
       "newtab": "index.html"
     },

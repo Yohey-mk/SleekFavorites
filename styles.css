@@ -20,6 +20,7 @@ body {
 #favorites-container {
     max-height: 80vh;
     overflow-y: auto;
+    overflow-x: hidden;
     flex-grow: 1;
     padding: 10px;
     text-align: center;
