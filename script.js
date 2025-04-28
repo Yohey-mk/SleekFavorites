@@ -87,7 +87,6 @@ applyMemoState();
             let link = document.createElement("a");
             link.href = fav.url;
             link.textContent = fav.name;
-            link.target = "_blank";
 
             let editFavButton = document.createElement("button");
             editFavButton.textContent = "edit";
@@ -226,3 +225,4 @@ applyMemoState();
     }
 
 });
+
